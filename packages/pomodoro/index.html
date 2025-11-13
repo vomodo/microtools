@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pomodoro Timer</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="pomodoro-container">
+  <h1>Pomodoro Timer</h1>
+
+  <div id="timer-display">25:00</div>
+  <div class="controls">
+    <button id="start-btn">Start</button>
+    <button id="pause-btn">Pause</button>
+    <button id="reset-btn">Reset</button>
+  </div>
+
+  <div id="session-count">Sessions Completed: 0</div>
+
+  <div class="sound-options">
+    <label><input type="radio" name="sound" value="none" checked /> Silent</label>
+    <label><input type="radio" name="sound" value="white-noise" /> White Noise</label>
+    <label><input type="radio" name="sound" value="classical" /> Classical Music</label>
+  </div>
+
+  <audio id="audio" loop>
+    <source id="audio-source" src="" type="audio/mpeg" />
+  </audio>
+</div>
+<script src="pomodoro.js"></script>
+</body>
+</html>
