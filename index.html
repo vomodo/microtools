@@ -14,10 +14,10 @@
     .microtools-home {
       background: white;
       border-radius: 20px;
-      padding: 48px 44px 42px 44px;
+      padding: 48px 36px 36px 36px;
       box-shadow: 0 15px 40px rgba(0,0,0,0.28);
-      max-width: 540px;
-      width: 100%;
+      max-width: 1100px;
+      width: 98vw;
       text-align:center;
       margin: 32px 0;
     }
@@ -27,18 +27,36 @@
     .divider {
       width: 60px; height: 4px; background:linear-gradient(90deg,#ff6d5a,#000000); margin:0 auto 30px auto; border-radius:2px;
     }
-    .category {
-      text-align: left; margin: 18px 0 12px 0; font-weight:600; letter-spacing: 0.3px; color: #ff6d5a;
-      font-size:1.12em;
+    .tool-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 38px 32px;
+      margin:0 auto;
+      max-width:1024px;
+      min-width:340px;
+      text-align: left;
+      justify-content: center;
     }
-    .tool-list {text-align:left; margin:0 auto; max-width:380px;}
+    .category {
+      font-weight:600;
+      letter-spacing: 0.3px;
+      color: #ff6d5a;
+      font-size:1.13em;
+      margin-bottom: 8px;
+      grid-column: span 3;
+      margin-top: 18px;
+    }
     .tool-row {
-      display:flex; align-items:center; justify-content: space-between;
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
       background: #f9f9f9;
-      margin-bottom:11px; border-radius:8px;
-      padding:13px 18px;
+      margin-bottom:11px;
+      border-radius:8px;
+      padding:13px 16px;
       font-size:1.04em;
       box-shadow: 0 3px 10px rgba(255,109,90,0.06);
+      min-width:220px;
     }
     .tool-row .status {
       font-size: 0.96em; font-weight: 500;
@@ -53,6 +71,16 @@
       transition: background .18s;
     }
     .tool-row a:hover { background: #d54329; }
+    @media (max-width: 1000px) {
+      .tool-list { grid-template-columns: 1fr 1fr; }
+      .category { grid-column: span 2; }
+      .microtools-home { padding: 40px 10px 36px 10px; }
+    }
+    @media (max-width: 690px) {
+      .tool-list { grid-template-columns: 1fr; }
+      .category { grid-column: span 1; }
+      .microtools-home { padding: 28px 2px; }
+    }
   </style>
 </head>
 <body>
