@@ -1,0 +1,12 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif; background:#f7f4f4; padding:28px; }
+h2 { text-align:center; color:#222; margin-bottom:18px; font-size:2em; }
+#richTextEditor {
+  background:#fff; min-height:240px; border-radius:8px; font-size:17px; line-height:1.7;
+  margin-bottom:22px;
+}
+#markdownOutput {
+  background:#fff; border-radius:8px; color:#4c365a; padding:20px;
+  font-size:15px; margin-bottom:14px;
+}
+button { font-size:16px; border-radius:6px; }
