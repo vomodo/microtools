@@ -9,56 +9,52 @@
       background: linear-gradient(135deg, #000000 0%, #ff6d5a 100%);
       min-height: 100vh;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-      display:flex; justify-content:center; align-items:center;
+      display:flex; justify-content:center; align-items:flex-start;
     }
     .microtools-home {
       background: white;
       border-radius: 20px;
-      padding: 48px 26px 38px 26px;
+      padding: 48px 18px 36px 18px;
       box-shadow: 0 15px 40px rgba(0,0,0,0.28);
-      max-width: 1300px;
+      max-width: 1400px;
       width: 99vw;
       margin: 36px 0;
+      min-height:90vh;
     }
     h1 {
-      font-size: 2.4em; color: #222; margin-bottom: 14px; font-weight: bold;
-      text-align: center;
+      font-size: 2.4em; color: #222; margin-bottom: 14px; font-weight: bold; text-align: center;
     }
     .divider {
       width: 60px; height: 4px; background:linear-gradient(90deg,#ff6d5a,#000000); margin:0 auto 36px auto; border-radius:2px;
     }
-    .grid-cards {
+    .card-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 34px 26px;
-      max-width: 1200px;
+      gap: 36px 30px;
+      max-width: 1250px;
       margin: 0 auto;
     }
     .category-card {
       background: #f7f4f8;
       border-radius: 18px;
-      padding: 32px 28px 24px 28px;
+      padding: 34px 24px 26px 24px;
       box-shadow: 0 3px 22px rgba(255,109,90,0.10);
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      min-height: 320px;
-      min-width: 265px;
+      min-height: 180px;
       position: relative;
-      justify-content: flex-start;
       border-top: 4px solid #ff6d5a;
+      margin-bottom: 0;
     }
     .category-title {
-      font-size: 1.29em; font-weight:700; color: #ff6d5a; margin-bottom: 23px; letter-spacing: 0.3px;
-      display: flex; align-items:center; gap:7px;
+      font-size: 1.27em; font-weight:700; color: #ff6d5a; margin-bottom: 21px; display: flex; align-items:center; gap:7px;
     }
-    .tool-list {
-      width:100%;
-    }
+    .tool-list { width:100%; }
     .tool-row {
       display:flex; align-items:center; justify-content: space-between;
       background: #fff;
-      margin-bottom:12px; border-radius:9px;
+      margin-bottom:13px; border-radius:9px;
       padding:12px 14px;
       font-size:1.03em;
       box-shadow: 0 3px 10px rgba(255,109,90,0.04);
@@ -66,23 +62,19 @@
       border: 1px solid #f3e3da;
       transition:box-shadow .18s, border .18s;
     }
-    .tool-row .status {
-      font-size: 0.97em; font-weight: 500; color:#ff6d5a;margin-right:5px;
-    }
+    .tool-row .status { font-size: 0.97em; font-weight: 500; color:#ff6d5a;margin-right:5px; }
     .tool-row .status.dev {color:#bbb;}
     .tool-row a {
       color: #fff; background: #ff6d5a;
       border-radius:6px; padding:6px 18px;
-      text-decoration:none; font-weight:600;
-      font-size:0.98em;transition: background .18s;
-    }
+      text-decoration:none; font-weight:600; font-size:0.98em;transition: background .18s; }
     .tool-row a:hover { background: #d54329; }
-    @media (max-width: 1100px) {
-      .grid-cards { grid-template-columns: 1fr 1fr; }
+    @media (max-width: 1120px) {
+      .card-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 740px) {
-      .grid-cards { grid-template-columns: 1fr; }
-      .microtools-home { padding:16px 3vw;}
+      .card-grid { grid-template-columns: 1fr; }
+      .microtools-home { padding:17px 2vw;}
     }
   </style>
 </head>
@@ -90,7 +82,7 @@
   <div class="microtools-home">
     <h1>Microtools Suite</h1>
     <div class="divider"></div>
-    <div class="grid-cards">
+    <div class="card-grid">
       <div class="category-card">
         <div class="category-title">📝 Text & Formatting</div>
         <div class="tool-list">
@@ -116,13 +108,6 @@
             <span class="status dev">Đang phát triển</span>
           </div>
         </div>
-        <div class="category-title" style="margin-top:36px;">📋 Productivity</div>
-        <div class="tool-list">
-          <div class="tool-row">
-            <span>Clipboard History</span>
-            <span class="status dev">Đang phát triển</span>
-          </div>
-        </div>
       </div>
       <div class="category-card">
         <div class="category-title">📊 Data & Tables</div>
@@ -136,7 +121,9 @@
             <span class="status dev">Đang phát triển</span>
           </div>
         </div>
-        <div class="category-title" style="margin-top:36px;">🎨 Design & Media</div>
+      </div>
+      <div class="category-card">
+        <div class="category-title">🎨 Design & Media</div>
         <div class="tool-list">
           <div class="tool-row">
             <span>Color Picker & Palette</span>
@@ -144,6 +131,15 @@
           </div>
           <div class="tool-row">
             <span>QR Code Generator</span>
+            <span class="status dev">Đang phát triển</span>
+          </div>
+        </div>
+      </div>
+      <div class="category-card">
+        <div class="category-title">📋 Productivity</div>
+        <div class="tool-list">
+          <div class="tool-row">
+            <span>Clipboard History</span>
             <span class="status dev">Đang phát triển</span>
           </div>
         </div>
