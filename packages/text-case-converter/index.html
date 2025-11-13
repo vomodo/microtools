@@ -9,31 +9,14 @@
   <h2>Text Case Converter</h2>
   <textarea id="textInput" placeholder="Nhập hoặc paste văn bản cần chuyển đổi..." style="width:100%;min-height:120px;margin-bottom:20px;font-size:1.07em;"></textarea>
   <div style="margin-bottom:22px">
-    <button onclick="convertCase('upper')">UPPERCASE</button>
-    <button onclick="convertCase('lower')">lowercase</button>
-    <button onclick="convertCase('title')">Title Case</button>
-    <button onclick="convertCase('camel')">camelCase</button>
-    <button onclick="convertCase('snake')">snake_case</button>
+    <button id="btn-upper">UPPERCASE</button>
+    <button id="btn-lower">lowercase</button>
+    <button id="btn-title">Title Case</button>
+    <button id="btn-camel">camelCase</button>
+    <button id="btn-snake">snake_case</button>
   </div>
   <textarea id="output" readonly placeholder="Kết quả..." style="width:100%;min-height:80px;font-family:'Courier New',monospace;"></textarea>
-  <button onclick="copyOutput()" style="margin-top:12px;padding:8px 20px;background:#ff6d5a;color:#fff;border:none;border-radius:6px;font-weight:600">Copy Output</button>
+  <button id="copyBtn" style="margin-top:12px;padding:8px 20px;background:#ff6d5a;color:#fff;border:none;border-radius:6px;font-weight:600">Copy Output</button>
 <script src="converter.js"></script>
-<script>
-function convertCase(type) {
-  let txt = document.getElementById('textInput').value;
-  let out = '';
-  if(type==='upper') out = txt.toUpperCase();
-  else if(type==='lower') out = txt.toLowerCase();
-  else if(type==='title') out = txt.replace(/\w\S*/g, function(w){return w.charAt(0).toUpperCase()+w.slice(1).toLowerCase();});
-  else if(type==='camel') out = txt.replace(/(?:^|\s|_|-)([a-zA-Z])/g, function(_,c){return c.toUpperCase();}).replace(/\s|_|-/g,''); out = out.charAt(0).toLowerCase() + out.slice(1);
-  else if(type==='snake') out = txt.replace(/\s+/g, '_').replace(/([a-z])([A-Z])/g, '$1_$2').toLowerCase();
-  document.getElementById('output').value = out;
-}
-function copyOutput() {
-  let out = document.getElementById('output');
-  out.select();
-  document.execCommand('copy');
-}
-</script>
 </body>
 </html>
