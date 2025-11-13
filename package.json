@@ -1,0 +1,12 @@
+{
+  "name": "microtools",
+  "private": false,
+  "workspaces": [
+    "packages/*",
+    "shared/*",
+    "apps/*"
+  ],
+  "version": "1.0.0",
+  "description": "Microtools suite monorepo - AI & office helpers",
+  "main": "index.js"
+}
