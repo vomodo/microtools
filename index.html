@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Microtools Suite</title>
+  <link rel="stylesheet" href="/shared/theme.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #000000 0%, #ff6d5a 100%);
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+      display:flex; justify-content:center; align-items:center;
+    }
+    .microtools-home {
+      background: white;
+      border-radius: 20px;
+      padding: 48px 44px 42px 44px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.28);
+      max-width: 500px;
+      width: 100%;
+      text-align:center;
+      margin: 32px 0;
+    }
+    h1 {
+      font-size: 2.3em; color: #222; margin-bottom: 14px; font-weight: bold
+    }
+    .divider {
+      width: 60px; height: 4px; background:linear-gradient(90deg,#ff6d5a,#000000); margin:0 auto 30px auto; border-radius:2px;
+    }
+    .tool-list {text-align:left; margin:0 auto; max-width:340px;}
+    .tool-row {
+      display:flex; align-items:center; justify-content: space-between;
+      background: #f9f9f9;
+      margin-bottom:11px; border-radius:8px;
+      padding:13px 18px;
+      font-size:1.04em;
+      box-shadow: 0 3px 10px rgba(255,109,90,0.06);
+    }
+    .tool-row .status {
+      font-size: 0.96em; font-weight: 500;
+      color:#ff6d5a;margin-right:5px;
+    }
+    .tool-row .status.dev {color:#bbb;}
+    .tool-row a {
+      color: #fff; background: #ff6d5a;
+      border-radius:6px; padding:6px 18px;
+      text-decoration:none; font-weight:600;
+      font-size:0.98em;
+      transition: background .18s;
+    }
+    .tool-row a:hover { background: #d54329; }
+  </style>
+</head>
+<body>
+  <div class="microtools-home">
+    <h1>Microtools Suite</h1>
+    <div class="divider"></div>
+    <div class="tool-list">
+      <div class="tool-row">
+        <span>Rich Text to Markdown</span>
+        <a href="/packages/rich-text-to-markdown/index.html" target="_blank">Truy cập</a>
+      </div>
+      <div class="tool-row">
+        <span>Text Case Converter</span>
+        <span class="status dev">Đang phát triển</span>
+      </div>
+      <div class="tool-row">
+        <span>Prompt Library</span>
+        <span class="status dev">Đang phát triển</span>
+      </div>
+      <div class="tool-row">
+        <span>CSV to Table</span>
+        <span class="status dev">Đang phát triển</span>
+      </div>
+      <div class="tool-row">
+        <span>Word Counter & Reading Time</span>
+        <span class="status dev">Đang phát triển</span>
+      </div>
+    </div>
+    <div style="margin-top:36px;color:#777;font-size:0.98em">More micro tools coming soon! 🚀</div>
+  </div>
+</body>
+</html>
