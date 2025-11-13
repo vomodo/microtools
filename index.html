@@ -28,24 +28,21 @@
       width: 60px; height: 4px; background:linear-gradient(90deg,#ff6d5a,#000000); margin:0 auto 36px auto; border-radius:2px;
     }
     .card-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 36px 30px;
+      column-count: 3;
+      column-gap: 30px;
       max-width: 1250px;
       margin: 0 auto;
     }
     .category-card {
+      display: block;
+      break-inside: avoid;
       background: #f7f4f8;
       border-radius: 18px;
       padding: 34px 24px 26px 24px;
       box-shadow: 0 3px 22px rgba(255,109,90,0.10);
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      min-height: 180px;
-      position: relative;
+      min-width: 220px;
+      margin-bottom: 26px;
       border-top: 4px solid #ff6d5a;
-      margin-bottom: 0;
     }
     .category-title {
       font-size: 1.27em; font-weight:700; color: #ff6d5a; margin-bottom: 21px; display: flex; align-items:center; gap:7px;
