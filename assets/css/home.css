@@ -1,0 +1,125 @@
+/* Home Page Styles - Dành riêng cho trang chủ */
+body.home {
+  background: linear-gradient(135deg, #000000 0%, #ff6d5a 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+}
+
+.microtools-home {
+  background: white;
+  border-radius: 20px;
+  padding: 48px 18px 36px 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.28);
+  max-width: 1400px;
+  width: 99vw;
+  margin: 36px 0;
+  min-height: 90vh;
+}
+
+.microtools-home h1 {
+  font-size: 2.4em;
+  color: #222;
+  margin-bottom: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6d5a, #000000);
+  margin: 0 auto 36px auto;
+  border-radius: 2px;
+}
+
+.card-grid {
+  column-count: 3;
+  column-gap: 30px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.category-card {
+  display: block;
+  break-inside: avoid;
+  background: #f7f4f8;
+  border-radius: 18px;
+  padding: 34px 24px 26px 24px;
+  box-shadow: 0 3px 22px rgba(255, 109, 90, 0.10);
+  min-width: 220px;
+  margin-bottom: 26px;
+  border-top: 4px solid #ff6d5a;
+}
+
+.category-title {
+  font-size: 1.27em;
+  font-weight: 700;
+  color: #ff6d5a;
+  margin-bottom: 21px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.tool-list {
+  width: 100%;
+}
+
+.tool-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  margin-bottom: 13px;
+  border-radius: 9px;
+  padding: 12px 14px;
+  font-size: 1.03em;
+  box-shadow: 0 3px 10px rgba(255, 109, 90, 0.04);
+  min-width: 210px;
+  border: 1px solid #f3e3da;
+  transition: box-shadow 0.18s, border 0.18s;
+}
+
+.tool-row .status {
+  font-size: 0.97em;
+  font-weight: 500;
+  color: #ff6d5a;
+  margin-right: 5px;
+}
+
+.tool-row .status.dev {
+  color: #bbb;
+}
+
+.tool-row a {
+  color: #fff;
+  background: #ff6d5a;
+  border-radius: 6px;
+  padding: 6px 18px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.98em;
+  transition: background 0.18s;
+}
+
+.tool-row a:hover {
+  background: #d54329;
+}
+
+@media (max-width: 1120px) {
+  .card-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 740px) {
+  .card-grid {
+    column-count: 1;
+  }
+  .microtools-home {
+    padding: 17px 2vw;
+  }
+}
