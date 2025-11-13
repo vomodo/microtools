@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Word Counter - Microtools</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h2>Word Counter</h2>
+  <textarea id="textInput" placeholder="Paste or type your text here..." style="width:100%;min-height:120px;margin-bottom:18px;font-size:1.07em;"></textarea>
+  <div id="result" style="margin-bottom:22px; font-size:1.08em; background:#f9f9f9;padding:16px 20px; border-radius:10px; color:#333;font-weight:500;"></div>
+<script>
+function countWords(text) {
+  let words = (text.trim().match(/\b\w+\b/g)||[]).length;
+  let chars = text.length;
+  let paras = text.split(/\n+/).filter(p=>p.trim()).length;
+  let readingTime = Math.max(1, Math.round(words/200)); // 200 wpm avg
+  return {words, chars, paras, readingTime};
+}
+let input = document.getElementById('textInput');
+let result = document.getElementById('result');
+function updateResult() {
+  let text = input.value;
+  let stats = countWords(text);
+  result.innerHTML =
+    `<span><b>${stats.words}</b> words</span> | <span><b>${stats.chars}</b> characters</span> | <span><b>${stats.paras}</b> paragraphs</span> | <span>Reading ~<b>${stats.readingTime}</b> min</span>`;
+}
+input.addEventListener('input', updateResult);
+updateResult();
+</script>
+</body>
+</html>
