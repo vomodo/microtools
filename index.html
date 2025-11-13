@@ -16,7 +16,7 @@
       border-radius: 20px;
       padding: 48px 44px 42px 44px;
       box-shadow: 0 15px 40px rgba(0,0,0,0.28);
-      max-width: 500px;
+      max-width: 540px;
       width: 100%;
       text-align:center;
       margin: 32px 0;
@@ -27,7 +27,11 @@
     .divider {
       width: 60px; height: 4px; background:linear-gradient(90deg,#ff6d5a,#000000); margin:0 auto 30px auto; border-radius:2px;
     }
-    .tool-list {text-align:left; margin:0 auto; max-width:340px;}
+    .category {
+      text-align: left; margin: 18px 0 12px 0; font-weight:600; letter-spacing: 0.3px; color: #ff6d5a;
+      font-size:1.12em;
+    }
+    .tool-list {text-align:left; margin:0 auto; max-width:380px;}
     .tool-row {
       display:flex; align-items:center; justify-content: space-between;
       background: #f9f9f9;
@@ -56,24 +60,45 @@
     <h1>Microtools Suite</h1>
     <div class="divider"></div>
     <div class="tool-list">
+      <div class="category">📝 Text & Formatting</div>
       <div class="tool-row">
         <span>Rich Text to Markdown</span>
         <a href="/packages/rich-text-to-markdown/index.html" target="_blank">Truy cập</a>
       </div>
       <div class="tool-row">
         <span>Text Case Converter</span>
-        <span class="status dev">Đang phát triển</span>
+        <a href="/packages/text-case-converter/index.html" target="_blank">Truy cập</a>
       </div>
+      <div class="tool-row">
+        <span>Word Counter</span>
+        <a href="/packages/word-counter/index.html" target="_blank">Truy cập</a>
+      </div>
+      <div class="category">🤖 AI Helpers</div>
       <div class="tool-row">
         <span>Prompt Library</span>
         <span class="status dev">Đang phát triển</span>
       </div>
+      <div class="category">📊 Data & Tables</div>
       <div class="tool-row">
         <span>CSV to Table</span>
         <span class="status dev">Đang phát triển</span>
       </div>
       <div class="tool-row">
-        <span>Word Counter & Reading Time</span>
+        <span>JSON Formatter</span>
+        <span class="status dev">Đang phát triển</span>
+      </div>
+      <div class="category">🎨 Design & Media</div>
+      <div class="tool-row">
+        <span>Color Picker & Palette</span>
+        <span class="status dev">Đang phát triển</span>
+      </div>
+      <div class="tool-row">
+        <span>QR Code Generator</span>
+        <span class="status dev">Đang phát triển</span>
+      </div>
+      <div class="category">📋 Productivity</div>
+      <div class="tool-row">
+        <span>Clipboard History</span>
         <span class="status dev">Đang phát triển</span>
       </div>
     </div>
